@@ -3,10 +3,9 @@ FROM ubuntu:latest
 MAINTAINER SeveirRoy
 
 RUN apt-get update && \
-    apt-get install git gcc -y --no-install-recommends && \
+    apt-get install wget gcc -y --no-install-recommends && \
     cd /home && \
-    git clone https://github.com/SeveirRoy/ioIntensiveApp.git && \
-    cd ioIntensiveApp && \
+    wget https://github.com/SeveirRoy/ioIntensiveApp/blob/master/ioIntensiveApp.c && \
     gcc -D -REENTRANT ioIntensiveApp.c -o ioIntensiveApp -lpthread 
 
 CMD ["/home/ioIntensiveApp"]
