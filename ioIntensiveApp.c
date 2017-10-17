@@ -155,7 +155,7 @@ void createFourFile()
     file8 = fopen("./test_file8", "w+");
 
 
-    int size = 50000000;
+    int size = 5000000;
     while(size > 0){
         fputc('a', file1);
         fputc('a', file2);
